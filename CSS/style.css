@@ -1,4 +1,9 @@
 :root{
+    --width-sidebar: 50px;
+    --col-categorie: 4;
+    --col-music: 2;
+    --gap-categorie: 10px;
+    --gap-music: 10px;
 
 }
 
@@ -11,21 +16,128 @@
 .wrapper{
     width: 100%;
     height: 100vh;
+    font-family: sans-serif;
 }
 /* Utilitys */
 
+.flex-row{
+    display: flex;
+}
+
+.tx-right{
+    text-align: right;
+}
+
+.color-white{
+    color: white;
+}
+
+.pb-10{
+    padding-bottom: 10px;
+}
+
+.pb-20{
+    padding-bottom: 20px;
+}
+
+.pb-30{
+    padding-bottom: 30px;
+}
 
 /* Main */
 
-.home{
-    height: calc(100%-100px);
+.main{
+    height: calc(100% - 100px);
 
-    /* debug */
-    background-color: blue;
 }
-.footer{
-    height: 100px;
 
+.footer{
+    height: 80px;
+    background-color: rgb(74, 74, 74);
+    position: relative;
+    z-index: 9999;
+}
+
+.sidebar{
+    background-color: black;
+    width: var(--width-sidebar);
+    height: 100%;
+}
+
+.home{
+    background-color: rgb(36, 35, 47);
+    width: calc(100% - var(--width-sidebar));
+    height: 100%;
+    position: relative;
+}
+
+.home-header{
+    height: 80px;
+    width: calc(100% - var(--width-sidebar));
+    position: fixed;
+    top: 0;
+    right: 0;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 99999;
+    padding: 0 10px;
+}
+
+.upgrade::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.upgrade h3{
+    position: relative;
+    z-index: 1;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    font-size: 0.5rem;
+    padding: 10px 25px;
+}
+
+
+
+.categorie ul{
+    gap: var(--gap-categorie);
+    width: 100%;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    padding-top: 90px;
+    justify-content: center;
+}
+.categorie li{
+    height: 20px;
+    width: calc(100% / var(--col-categorie) - (var(--gap-categorie) * ((var(--col-categorie) - 1 )) / var(--col-categorie)));
     /* debug */
-    background-color: red;
+    border: 1px solid white;
+}
+
+.home-main{
+    overflow: scroll;
+    padding: 10px 20px;
+}
+
+.recently-played .griglia{
+    gap: var(--gap-categorie);
+    width: 100%;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.recently-played .card{
+    height: 100px;
+    width: calc(100% / var(--col-music) - (var(--gap-music) * ((var(--col-music) - 1 )) / var(--col-music)));
+    
+    /* debug */
+    border: 1px solid white;
 }
