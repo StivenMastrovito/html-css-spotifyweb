@@ -4,6 +4,7 @@
     --col-music: 2;
     --gap-categorie: 10px;
     --gap-music: 10px;
+    --height-footer: 60px
 
 }
 
@@ -47,12 +48,12 @@
 /* Main */
 
 .main{
-    height: calc(100% - 100px);
+    height: calc(100% - var(--height-footer));
 
 }
 
 .footer{
-    height: 80px;
+    height: var(--height-footer);
     background-color: rgb(74, 74, 74);
     position: relative;
     z-index: 9999;
@@ -72,7 +73,7 @@
 }
 
 .home-header{
-    height: 80px;
+    height: var(--height-footer);
     width: calc(100% - var(--width-sidebar));
     position: fixed;
     top: 0;
@@ -112,7 +113,7 @@
     list-style: none;
     flex-wrap: wrap;
     padding: 0 20px;
-    padding-top: 90px;
+    padding-top: 80px;
     justify-content: center;
 }
 .categorie li{
@@ -123,21 +124,28 @@
 }
 
 .home-main{
-    overflow: scroll;
+    height: calc(100% - 100px);
+    overflow-y: scroll;
     padding: 10px 20px;
+
 }
 
-.recently-played .griglia{
+.cartelle .griglia{
     gap: var(--gap-categorie);
     width: 100%;
     list-style: none;
     flex-wrap: wrap;
 }
 
-.recently-played .card{
+.cartelle .card{
     height: 100px;
     width: calc(100% / var(--col-music) - (var(--gap-music) * ((var(--col-music) - 1 )) / var(--col-music)));
     
     /* debug */
     border: 1px solid white;
+}
+
+.cartelle p{
+    font-size: 0.5rem;
+    color: gray;
 }
