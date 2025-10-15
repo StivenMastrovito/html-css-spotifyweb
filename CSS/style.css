@@ -4,7 +4,7 @@
     --col-music: 2;
     --gap-categorie: 10px;
     --gap-music: 10px;
-    --height-footer: 80px
+    --height-footer: 60px
 
 }
 
@@ -12,6 +12,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: inherit;
+    color: inherit;
 }
 
 .wrapper{
@@ -23,6 +32,11 @@
 
 .flex-row{
     display: flex;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
 }
 
 .tx-right{
@@ -68,6 +82,39 @@
 .fw-700{
     font-weight: 700;
 }
+
+.col-25{
+    width: 25%;
+}
+
+.fs-5{
+    font-size: 0.5rem;
+}
+.fs-7{
+    font-size: 0.7rem;
+}
+.fs-9{
+    font-size: 0.9rem;
+}
+
+.fs-1-5{
+    font-size: 1.5rem;
+}
+
+.gap-5{
+    gap: 5px;
+}
+.gap-10{
+    gap: 10px;
+}
+.gap-20{
+    gap: 20px;
+}
+
+.align-center{
+    align-items: center;
+}
+
 /* Main */
 
 body{
@@ -229,15 +276,14 @@ body{
     width: 100%;
     list-style: none;
     flex-wrap: wrap;
-    padding: 0 20px;
     justify-content: center;
+    text-align: center;
 }
 
 .categorie li{
-    height: 20px;
+    font-size: 0.6rem;
+    color: gray;
     width: calc(100% / var(--col-categorie) - (var(--gap-categorie) * ((var(--col-categorie) - 1 )) / var(--col-categorie)));
-    /* debug */
-    border: 1px solid white;
 }
 
 .home-main{
@@ -255,14 +301,97 @@ body{
 }
 
 .cartelle .card{
-    height: 100px;
     width: calc(100% / var(--col-music) - (var(--gap-music) * ((var(--col-music) - 1 )) / var(--col-music)));
-    
-    /* debug */
-    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
+
+.cartelle .card h5{
+    text-align: center;
+}
+
 
 .cartelle p{
     font-size: 0.5rem;
     color: gray;
+}
+
+.artisti-popolari .card img{
+    border-radius: 50%;
+}
+
+.footer .left img{
+    height: 25px;
+    width: 25px;
+}
+.footer{
+    padding: 0 5px;
+    align-items: center;
+}
+.footer .left{
+    height: 100%;
+    align-items: center;
+}
+
+.footer .center{
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .right{
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer .right #volume-slider{
+    width: 60px;
+}
+
+.media-player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* background-color: #121212; */
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 250px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+.media-player-small {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* background-color: #121212; */
+  /* padding: 5px 10px; */
+  margin-right: 5px;
+  border-radius: 8px;
+  width: 100px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.time, .duration {
+  font-size: 14px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 6px;
+  background-color: #444;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 9.1%; 
+  background-color: white;
+  border-radius: 3px 0 0 3px;
 }
