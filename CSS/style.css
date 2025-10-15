@@ -4,7 +4,7 @@
     --col-music: 2;
     --gap-categorie: 10px;
     --gap-music: 10px;
-    --height-footer: 60px
+    --height-footer: 80px
 
 }
 
@@ -33,6 +33,22 @@
     color: white;
 }
 
+.tx-gray{
+    color: gray;
+}
+
+.mb-5{
+    margin-bottom: 5px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+
 .pb-10{
     padding-bottom: 10px;
 }
@@ -45,7 +61,18 @@
     padding-bottom: 30px;
 }
 
+.display{
+    display: none;
+}
+
+.fw-700{
+    font-weight: 700;
+}
 /* Main */
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
 
 .main{
     height: calc(100% - var(--height-footer));
@@ -63,6 +90,83 @@
     background-color: black;
     width: var(--width-sidebar);
     height: 100%;
+    padding: 5px 10px;
+}
+
+.top-sidebar{
+    height: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.top-sidebar .home{
+    height: 30px;
+}
+
+.top-sidebar .elemento{
+    align-items: center;
+    gap: 10px;
+}
+
+.top-sidebar .logo{
+    height: 30px;
+    width: 30px;
+}
+
+
+.crea-playlist{
+    font-size: 0.8rem;
+    align-items: center;
+    gap: 5px;
+}
+
+.crea-playlist i{
+    background-color: gray;
+    color:black;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    font-size: 1.2rem;
+}
+
+.top-sidebar .playlist ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.7rem;
+    max-height: 110px;
+    overflow-y: auto;
+}
+
+.bottom-sidebar{
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.bottom-sidebar div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.bottom-sidebar .download img{
+    height: 15px;
+    width: 15px;
+}
+
+.bottom-sidebar .utente img{
+    height: 25px;
+    width: 25px;
+    background-color: gray;
+    border-radius: 50%;
 }
 
 .home{
@@ -73,7 +177,7 @@
 }
 
 .home-header{
-    height: var(--height-footer);
+    height: 60px;
     width: calc(100% - var(--width-sidebar));
     position: fixed;
     top: 0;
@@ -113,9 +217,9 @@
     list-style: none;
     flex-wrap: wrap;
     padding: 0 20px;
-    padding-top: 80px;
     justify-content: center;
 }
+
 .categorie li{
     height: 20px;
     width: calc(100% / var(--col-categorie) - (var(--gap-categorie) * ((var(--col-categorie) - 1 )) / var(--col-categorie)));
@@ -124,10 +228,10 @@
 }
 
 .home-main{
-    height: calc(100% - 100px);
+    height: 100%;
     overflow-y: scroll;
     padding: 10px 20px;
-
+    padding-top: 80px;
 }
 
 .cartelle .griglia{

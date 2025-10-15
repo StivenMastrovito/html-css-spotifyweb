@@ -5,7 +5,36 @@
     --width-sidebar: 150px;
     --col-categorie: 3;
     }
+
+    .top-sidebar .logo-small{
+        display: none;
+    }
+
+    .top-sidebar .logo-big{
+        display: block;
+    }
+
+    .text{
+        display: inline;
+        font-size: 0.8rem;
+        flex-grow: 1;
+    }
+
+    .top-sidebar .playlist{
+        display: inline-block;
+    }
+
+    .bottom-sidebar .display {
+        display: inline-block;
+    }
+
+    .bottom-sidebar{
+    align-items: flex-start;
+    gap: 20px;
+    }
 }
+    
+
 
 
 /* tablet-md: 700px */

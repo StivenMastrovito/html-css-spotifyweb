@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/responsive.css">
 
@@ -14,25 +23,71 @@
 <body>
     <div class="wrapper">
         <div class="main flex-row">
-            <div class="sidebar"></div>
+            <div class="sidebar tx-gray fw-700">
+                <div class="top-sidebar">
+                    <div class="logo.spotify pb-10">
+                        <img class="logo-small" src="./img/logo-small.svg" alt="">
+                        <img class="logo-big display" src="./img/logo.svg" alt="">
+                    </div>
+                    <div class="home elemento mb-5 flex-row">
+                        <img class="logo" src="./img/home.svg" alt="">
+                        <span class="display text">Home</span>
+                    </div>
+                    <div class="search elemento flex-row">
+                        <img class="logo" src="./img/search.svg" alt="">
+                        <span class="display text">Cerca</span>
+                    </div>
+                    <div class="library elemento flex-row mb-10">
+                        <img class="logo" src="./img/libreria.svg" alt="">
+                        <span class="display text">La tua libreria</span>
+                    </div>
+                    <div class="playlist display">
+                        <h4 class="mb-5 color-white ">PLAYLIST</h4>
+                        <div class="crea-playlist flex-row mb-10">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Crea Playlist</span>
+                        </div>
+                        <ul>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-sidebar">
+                    <div class="download">
+                        <img src="./img/download.svg" alt="">
+                        <span class="display">Installa app</span>
+                    </div>
+                    <hr class="display">
+                    <div class="utente ">
+                        <img src="./img/profile.svg" alt="">
+                        <span class="display color-white">John Doe</span>
+                    </div>
+                </div>
+            </div>
             <div class="home">
                 <div class="home-header flex-row">
                     <div class="upgrade">
                         <h3>EFFETTUA L'UPGRADE</h3>
                     </div>
                 </div>
-
-                <div class="categorie flex-row pb-30">
-                    <ul class="flex-row">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
                 <div class="home-main">
+                    <div class="categorie flex-row pb-30">
+                        <ul class="flex-row">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
                     <div class="recently-played cartelle color-white pb-20">
                         <h3 class="title pb-20">Recently played</h3>
                         <div class="griglia flex-row">
