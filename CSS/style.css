@@ -1,183 +1,197 @@
-:root{
+:root {
     --width-sidebar: 50px;
     --col-categorie: 4;
     --col-music: 2;
     --gap-categorie: 10px;
     --gap-music: 10px;
     --height-footer: 60px
-
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-img{
+img {
     width: 100%;
 }
 
-a{
+a {
     text-decoration: inherit;
     color: inherit;
 }
 
-.wrapper{
+.wrapper {
     width: 100%;
     height: 100vh;
     font-family: sans-serif;
 }
+
 /* Utilitys */
 
-.flex-row{
+.flex-row {
     display: flex;
 }
 
-.flex-column{
+.flex-column {
     display: flex;
     flex-direction: column;
 }
 
-.tx-right{
+.tx-right {
     text-align: right;
 }
 
-.color-white{
+.color-white {
     color: white;
 }
 
-.tx-gray{
+.tx-gray {
     color: gray;
 }
 
-.mb-5{
+.mb-5 {
     margin-bottom: 5px;
 }
 
-.mb-10{
+.mb-10 {
     margin-bottom: 10px;
 }
 
-.mb-20{
+.mb-20 {
     margin-bottom: 20px;
 }
 
-.pb-10{
+.pb-10 {
     padding-bottom: 10px;
 }
 
-.pb-20{
+.pb-20 {
     padding-bottom: 20px;
 }
 
-.pb-30{
+.pb-30 {
     padding-bottom: 30px;
 }
 
-.display{
+.display {
     display: none;
 }
 
-.fw-700{
+.fw-700 {
     font-weight: 700;
 }
 
-.col-25{
+.col-25 {
     width: 25%;
 }
 
-.fs-5{
+.fs-5 {
     font-size: 0.5rem;
 }
-.fs-7{
+
+.fs-7 {
     font-size: 0.7rem;
 }
-.fs-9{
+
+.fs-9 {
     font-size: 0.9rem;
 }
 
-.fs-1-5{
+.fs-1-5 {
     font-size: 1.5rem;
 }
 
-.gap-5{
+.gap-5 {
     gap: 5px;
 }
-.gap-10{
+
+.gap-10 {
     gap: 10px;
 }
-.gap-20{
+
+.gap-20 {
     gap: 20px;
 }
 
-.align-center{
+.align-center {
     align-items: center;
 }
 
 /* Main */
 
-body{
+body {
     font-family: "Montserrat", sans-serif;
 }
 
-.main{
+.main {
     height: calc(100% - var(--height-footer));
 
 }
 
-.footer{
+.footer {
     height: var(--height-footer);
     background-color: rgb(74, 74, 74);
     position: relative;
     z-index: 9999;
 }
 
-.sidebar{
+.sidebar {
     background-color: black;
     width: var(--width-sidebar);
     height: 100%;
     padding: 5px 10px;
 }
 
-.top-sidebar{
+.top-sidebar {
     height: calc(100% - 80px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.top-sidebar .home{
+.top-sidebar .home {
     height: 30px;
 }
 
-.top-sidebar .elemento{
+.top-sidebar .elemento {
     align-items: center;
     gap: 10px;
 }
 
-.top-sidebar .logo{
+.top-sidebar .logo {
     height: 30px;
     width: 30px;
 }
 
+.sidebar .home::before{
+    content: "";
+    background-color: yellowgreen;
+    height: 100%;
+    width: 2px;
+    left: -10px;
+    top: 0px;
+    position: absolute;
+}
 
-.crea-playlist{
+
+.crea-playlist {
     font-size: 0.8rem;
     align-items: center;
     gap: 5px;
 }
 
-.crea-playlist i{
+.crea-playlist i {
     background-color: gray;
-    color:black;
+    color: black;
     height: 30px;
     width: 30px;
     line-height: 30px;
     font-size: 1.2rem;
 }
 
-.top-sidebar .playlist ul{
+.top-sidebar .playlist ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -187,7 +201,7 @@ body{
     overflow-y: auto;
 }
 
-.bottom-sidebar{
+.bottom-sidebar {
     height: 80px;
     display: flex;
     flex-direction: column;
@@ -196,7 +210,7 @@ body{
     gap: 20px;
 }
 
-.bottom-sidebar div{
+.bottom-sidebar div {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -204,39 +218,39 @@ body{
 
 
 
-.bottom-sidebar .download img{
+.bottom-sidebar .download img {
     height: 15px;
     width: 15px;
 }
 
-.bottom-sidebar .download span{
+.bottom-sidebar .download span {
     font-size: 0.6rem;
 }
 
-.bottom-sidebar hr{
+.bottom-sidebar hr {
     width: 100%;
 }
 
-.bottom-sidebar .utente img{
+.bottom-sidebar .utente img {
     height: 25px;
     width: 25px;
     background-color: gray;
     border-radius: 50%;
 }
 
-.bottom-sidebar .utente span{
+.bottom-sidebar .utente span {
     font-size: 0.8rem;
-    color: white;    
+    color: white;
 }
 
-.home{
+.home {
     background-color: rgb(36, 35, 47);
     width: calc(100% - var(--width-sidebar));
     height: 100%;
     position: relative;
 }
 
-.home-header{
+.home-header {
     height: 60px;
     width: calc(100% - var(--width-sidebar));
     position: fixed;
@@ -248,18 +262,18 @@ body{
     padding: 0 10px;
 }
 
-.upgrade::before{
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+.upgrade::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.upgrade h3{
+.upgrade h3 {
     position: relative;
     z-index: 1;
     color: white;
@@ -269,9 +283,14 @@ body{
     padding: 10px 25px;
 }
 
+.upgrade h3:hover{
+    font-size: 0.8rem;
+    cursor: pointer;
+}
 
 
-.categorie ul{
+
+.categorie ul {
     gap: var(--gap-categorie);
     width: 100%;
     list-style: none;
@@ -280,118 +299,206 @@ body{
     text-align: center;
 }
 
-.categorie li{
+.categorie li {
+    position:relative;
     font-size: 0.6rem;
     color: gray;
-    width: calc(100% / var(--col-categorie) - (var(--gap-categorie) * ((var(--col-categorie) - 1 )) / var(--col-categorie)));
+    width: calc(100% / var(--col-categorie) - (var(--gap-categorie) * ((var(--col-categorie) - 1)) / var(--col-categorie)));
 }
 
-.home-main{
+.categorie .linea::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: yellowgreen;
+    transform: rotate(180);
+}
+
+
+.home-main {
     height: 100%;
     overflow-y: scroll;
     padding: 10px 20px;
     padding-top: 80px;
 }
 
-.cartelle .griglia{
+.cartelle .griglia {
     gap: var(--gap-categorie);
     width: 100%;
     list-style: none;
     flex-wrap: wrap;
 }
 
-.cartelle .card{
-    width: calc(100% / var(--col-music) - (var(--gap-music) * ((var(--col-music) - 1 )) / var(--col-music)));
+.cartelle .card {
+    width: calc(100% / var(--col-music) - (var(--gap-music) * ((var(--col-music) - 1)) / var(--col-music)));
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
 }
 
-.cartelle .card h5{
+.recently-played .div{
+    position: relative;
+}
+
+.recently-played .div img{
+    position: relative;
+    z-index: 2;
+}
+
+.recently-played .div span{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.recently-played .card i {
+    position: absolute;
+    fill: white;
+    z-index: 1;
+    font-size: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.cartelle .card h5 {
     text-align: center;
 }
 
 
-.cartelle p{
+.cartelle p {
     font-size: 0.5rem;
     color: gray;
 }
 
-.artisti-popolari .card img{
+.artisti-popolari .card img {
     border-radius: 50%;
 }
 
-.footer .left img{
+.footer .left img {
     height: 25px;
     width: 25px;
 }
-.footer{
+
+.footer {
     padding: 0 5px;
     align-items: center;
 }
-.footer .left{
+
+.footer .left {
     height: 100%;
     align-items: center;
 }
 
-.footer .center{
+.footer .center {
     flex-grow: 1;
     align-items: center;
     justify-content: center;
 }
 
-.footer .right{
+.footer .right {
     align-items: center;
     justify-content: flex-end;
 }
 
-.footer .right #volume-slider{
+.footer .right #volume-slider {
     width: 60px;
 }
 
-.media-player {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  /* background-color: #121212; */
-  padding: 10px 20px;
-  border-radius: 8px;
-  width: 250px;
-  color: #fff;
-  font-family: Arial, sans-serif;
-}
-.media-player-small {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  /* background-color: #121212; */
-  /* padding: 5px 10px; */
-  margin-right: 5px;
-  border-radius: 8px;
-  width: 100px;
-  color: #fff;
-  font-family: Arial, sans-serif;
+.line{
+    height: 6px;
+    position:relative;
 }
 
-.time, .duration {
-  font-size: 14px;
-  min-width: 40px;
-  text-align: center;
+.music .played{
+    width: 15px;
+    background-color: rgb(197, 197, 197);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.music .player{
+    width: 85px;
+    background-color: gray;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
 }
 
-.progress-bar {
-  flex-grow: 1;
-  height: 6px;
-  background-color: #444;
-  border-radius: 3px;
-  position: relative;
-  overflow: hidden;
+.volume .played{
+    width: 15px;
+    background-color: rgb(197, 197, 197);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.volume .player{
+    width: 55px;
+    background-color: gray;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
 }
 
-.progress-fill {
-  height: 100%;
-  width: 9.1%; 
-  background-color: white;
-  border-radius: 3px 0 0 3px;
+.footer .bar .played:after{
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translate(0,-50%);
+    z-index: 1;
+    display: none;
+}
+
+/* HOVER */
+.tx-white-hover:hover{
+    color: white;
+    cursor: pointer;
+    fill: white;
+}
+
+.bg-white-hover:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+.cursor:hover{
+    cursor: text;
+}
+
+.footer .left .nome:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.big-fs:hover{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.recently-played .div img:hover{
+    z-index: 0;
+}
+.recently-played .div:hover{
+    cursor: pointer;
+}
+
+.footer .bar:hover .played{
+    background-color: yellowgreen;
+}
+.footer .bar:hover .played::after{
+    display: block;
 }

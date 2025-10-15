@@ -57,12 +57,20 @@
         --col-music: 4;
     }
 
-    .footer .left .icon{
+    .footer .left .icon {
         flex-direction: row;
         gap: 10px;
         margin-left: 20px;
     }
 
+    .music .played {
+        width: 50px;
+        
+    }
+
+    .music .player {
+        width: 200px
+    }
 }
 
 
@@ -75,9 +83,33 @@
 
     .categorie li {
         width: auto;
+        font-size: 1rem;
     }
 
-    .footer{
+    .footer {
         font-size: 1rem;
+    }
+
+    .top-sidebar .elemento {
+        margin-bottom: 15px;
+    }
+
+    .top-sidebar .playlist {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .top-sidebar .playlist ul {
+        font-size: 1rem;
+        gap: 20px;
+        max-height: 200px;
+    }
+
+    .crea-playlist i {
+        height: 40px;
+        width: 40px;
+        font-size: 2rem;
+        line-height: 40px;
     }
 }
