@@ -162,11 +162,24 @@ body{
     width: 15px;
 }
 
+.bottom-sidebar .download span{
+    font-size: 0.6rem;
+}
+
+.bottom-sidebar hr{
+    width: 100%;
+}
+
 .bottom-sidebar .utente img{
     height: 25px;
     width: 25px;
     background-color: gray;
     border-radius: 50%;
+}
+
+.bottom-sidebar .utente span{
+    font-size: 0.8rem;
+    color: white;    
 }
 
 .home{
