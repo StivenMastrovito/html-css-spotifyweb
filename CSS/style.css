@@ -405,6 +405,7 @@ body {
     flex-grow: 1;
     align-items: center;
     justify-content: center;
+    width: 50%;
 }
 
 .footer .right {
@@ -421,14 +422,22 @@ body {
     position:relative;
 }
 
+.center>.music{
+    width: 100%;
+}
+.center .music .bar{
+    flex-shrink: 2;
+    width: 100%;
+}
+
 .music .played{
-    width: 15px;
+    width: 15%;
     background-color: rgb(197, 197, 197);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 .music .player{
-    width: 85px;
+    width: 85%;
     background-color: gray;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
