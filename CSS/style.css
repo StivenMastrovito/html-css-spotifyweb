@@ -303,7 +303,6 @@ body {
     position:relative;
     font-size: 0.6rem;
     color: gray;
-    width: calc(100% / var(--col-categorie) - (var(--gap-categorie) * ((var(--col-categorie) - 1)) / var(--col-categorie)));
 }
 
 .categorie .linea::before{
@@ -406,6 +405,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 50%;
+    flex-shrink: 2;
 }
 
 .footer .right {
@@ -498,7 +498,7 @@ body {
     cursor: pointer;
 }
 
-.recently-played .div img:hover{
+.recently-played .div:hover img{
     z-index: 0;
 }
 .recently-played .div:hover{
